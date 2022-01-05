@@ -16,7 +16,7 @@ class CreateCustomerTable extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("email");
+            $table->string("email")->unique();
             $table->date("subscribtion_end_date");
             $table->timestamps();
         });
